@@ -155,7 +155,7 @@ jobs:
           PYTHONPATH: ${{ github.workspace }}/src
         run: |
           echo "🔍 Checking test coverage..."
-          coverage run  source=src -m pytest tests
+          coverage run --source=src -m pytest tests
           coverage report --fail-under=100
           echo "✅ 100% test coverage achieved!"
 
